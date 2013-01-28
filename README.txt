@@ -3,6 +3,9 @@ Evelyn Eastmond (c) 2010
 evhan55@gmail.com
 evelyneastmond.com
 
+This is the code for the http://designblocksjs.appspot.com website.
+DesignBlocks is a Scratch-like (scratch.mit.edu) interface for a Processing-like (processing.org) environment.
+
 The DesignBlocksJS website code relies on a sample set of projects and users on a database stored in GoogleAppEngine (GAE).  To connect it to another set of users, you need to change which server this is connected to.  The server protocol is not currently documented.
 
 The /src directory just points to a servlet for GAE to serve the HTML5 code.
