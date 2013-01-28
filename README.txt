@@ -1,6 +1,7 @@
 DesignBlocksJS
-Evelyn Eastmond
-evelyn@media.mit.edu
+Evelyn Eastmond (c) 2010
+evhan55@gmail.com
+evelyneastmond.com
 
 The DesignBlocksJS website code relies on a sample set of projects and users on a database stored in GoogleAppEngine (GAE).  To connect it to another set of users, you need to change which server this is connected to.  The server protocol is not currently documented.
 
