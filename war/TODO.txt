@@ -1,0 +1,154 @@
+Blocks
+	[X] blocks as objects? (dot notation)
+	[X] blocks hold color?
+	[X] hat block shape
+	[X] boolean block shape
+	[X] reporter shape
+	[X] parse specs
+	[X] icons on blocks
+	[X] arguments that you can type into
+	[X] preload images
+	[X] re-layout of type-in arguments
+	[X] allow recursive nesting of arguments
+	[x] allow recursive removal of nested arguments
+	[X] recursive layout of nested arguments
+	[X] math arguments try to insert into their own slots
+	[X] multiple arguments highlight?
+	[X] c block shape
+	[X] selection triggered when picking up blocks by label/image?
+	[X] c block inner block layout
+	[X] can't detach c blocks from bottom of stacks
+	[X] boolean argument slot + highlighting + attachment
+	[X] c block inner block attachment
+Brian's JS interpreter
+	[X] attach Brian's interpreter
+		[X] figure out simple connections
+		[X] figure out substack connections
+		[X] recurse evaluation through arguments
+		[X] apply transformation to shapes
+		[X] add 'setup' and 'run' functionality to interpreter
+		
+		[X]	["@playIcon",					"h", "prim_runonce"],
+		[X]	["@playIconLoop",				"h", "RUNFOREVER"],
+		[X]	["repeat %n",					"c", "REPEAT",				10],
+		[X]	["if %b",						"c", "IF"],
+		[ ]	["if %b",						"e", "IFELSE"],
+		[X]	["wait %n",						" ", "WAIT",				1],
+		[X]	["stop",						" ", "STOP_ALL"],
+		[X]	["move %n",						" ", "TRANSLATE",			50],
+		[X]	["move to x %n y %n",			" ", "MOVETO",				0,50],
+		[X]	["x",							"r", "X"],
+		[X]	["y",							"r", "Y"],
+		[X]	["rotate by %n",				" ", "ROTATEBY",			30],
+		[X]	["set rotation %n",				" ", "SETROTATION",  		90],
+		[X]	["rotation",					"r", "ROTATION"],
+		[X]	["set scale %n %",				" ", "SETSCALE",			200],
+		[X]	["scale",						"r", "SCALE"],
+		[X]	["off canvas?",					"b", "OFFCANVAS"],
+		[X]	["@lineIcon %n",				" ", "LINE",				50],
+		[X]	["@lineIcon to x %n y %n",		" ", "LINETO",				0,50],
+		[X]	["@frectIcon w %n h %n",		" ", "FILLRECT",			30,50],
+		[X]	["@trectIcon w %n h %n",		" ", "TRACERECT",			30,50],
+		[X]	["@fellipseIcon w %n h %n",		" ", "FILLELLIPSE",			30,50],
+		[X]	["@tellipseIcon w %n h %n",		" ", "TRACEELLIPSE",		30,50],
+		[X]	["text %s",						" ", "TEXT",				"design"],
+		[X]	["set brush size %n",			" ", "SETBRUSHSIZE",		1],
+		[X]	["brush size",					"r", "BRUSHSIZE"],
+		[ ]	["set color %p",				" ", "prim_setcolor"],
+		[X]	["set hue %n",					" ", "prim_setfillhue",				0],
+		[X]	["set saturation %n",			" ", "prim_setfillsaturation",		100],
+		[X]	["set lightness %n",			" ", "prim_setfilllightness",		50],
+		[X]	["set transparency %n",			" ", "SETALPHA",			0],
+		[X]	["hue",							"r", "HUE"],
+		[X]	["saturation",					"r", "SATURATION"],
+		[X]	["lightness",					"r", "LIGHTNESS"],
+		[X]	["transparency",				"r", "ALPHA"],
+		[ ]	["get color at x %n y %n",		" ", "GETCOLORAT",			0, 0],
+		[ ]	["color at %n %n",				"r", "COLORAT"],
+		[X]	["clean",						" ", "prim_clean"],
+		[X]	["fill background %n",			" ", "prim_fillscreen"],
+		[X]	["%n + %n",						"r", "PLUS"],
+		[X]	["%n - %n",						"r", "MINUS"],
+		[X]	["%n * %n",						"r", "TIMES"],
+		[X]	["%n / %n",						"r", "DIVIDE"],
+		[X]	["%n % %n",						"r", "MOD"],
+		[X]	["%n < %n",						"b", "LESS"],
+		[X]	["%n = %n",						"b", "EQUAL"],
+		[X]	["%n > %n",						"b", "GREATER"],
+		[X]	["%b and %b",					"b", "AND"],
+		[X]	["%b or %b",					"b", "OR"],
+		[X]	["not %b",						"b", "NOT"],
+		[X]	["@diceIcon %n to %n",			"r", "RANDOM",				1, 100],
+		[X]	["round %n",					"r", "ROUND", 				1.5],
+		
+		[X]	["mouse x",						"r", "MOUSEX"],
+		[X]	["mouse y",						"r", "MOUSEY"],
+		[X]	["mouse pressed",				"b", "MOUSEDOWN"],
+		
+		[X]	["%v",							"r", "GETVAR",			"v"],
+		[X]	["set %v to %n",				" ", "SETVAR",			"v", 0],
+		[X]	["change %v by %n",				" ", "CHANGEVAR",		"v", 1],
+		[X]	["custom block",				"h", "PROCEDUREDEF"],
+		[X] ["custom block",				" ", "PROCEDURE"],
+		
+		[ ]	["@flickrIcon %f",				" ", "FLICKR"],
+		[X]	["@colourIcon %s",				" ", "COLOUR",			"love"],
+		[ ]	["camera image",				" ", "CAMERAIMAGE"],
+		[ ]	["camera motion",				"r", "CAMERAMOTION"],
+		[ ]	["loudness",					"r", "LOUDNESS"],
+		[ ]	["push",						" ", "TRANSFORMPUSH"],
+		[ ]	["pop",							" ", "TRANSFORMPOP"]
+------------------------------------------------------------------
+Interpreter
+	[X] make it loop faster?
+	[X] add stop functionality
+	[X] make play button run all setup stacks and first play stack
+	[X] make sure setup stacks all complete first before play stack
+	[ ] make multi-threaded?
+	[ ] buffer 2x canvas offscreen
+BlocksEngine
+	[X] variables
+	[X] procedures
+	[X] load JSON
+		[X] blocks
+		[X] procedures
+		[X] variables
+	[ ] save JSON
+UI
+	[X] comment out unimplemented blocks
+	[X] fix preloading of UI while GAE fetches
+	[X] replace play and stop buttons with designblocks ones
+	[ ] adding variables
+	[ ] adding procedures
+	[ ] add menu for save/loading/title
+	[ ] grid
+	[ ] nib
+	[ ] feedback pane
+	[ ] scrolling panes?
+	[ ] menu bars
+	[ ] buttons
+	[ ] loading pane
+	[ ] highlight running stacks
+	[ ] figure out full screen
+BUGS
+	[X] set transparency doesn't work
+	[X] blocks deleting down bottom part of pane
+	[X] return full hex number
+	[X] recursive evaluation order wrong
+	[X] do the right thing when attached at top notch and substack exists
+	[X] highlighting of play/stop inconsistent
+	[X] can't click on buttons if turtle under mouse
+	[ ] place highlight correctly left (nested c blocks, etc)
+	[ ] pane opening/closing sometimes gets stuck in a loop
+	[ ] do the right thing when closeblock works for bottom of substack *and* bottom of c block
+	[ ] type in c block layout glitch
+	[ ] overlay play on thumbnails doesn't go away all the time
+	
+SHORT TERM
+	[X] add pencil icon instead of 'UI'
+	[X] fix palette color
+	[X] change colors of blocks?
+	[X] fix palette overlaying on blocks
+	[X] add selected style to palette buttons
+	[X] fix boolean arg layout
+	[X] add project/user title to project

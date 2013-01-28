@@ -1,0 +1,208 @@
+/* See license.txt for license */
+
+/* GALLERIFFIC */
+
+div#player {
+	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+	float: right;
+	width: 500px;
+	height: 500px;
+	border: 1px solid #ccc;
+	padding: 2px;
+	margin-top: 4px;
+}
+div#playerwrapper {
+	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+	float: right;
+	border: 1px solid #ccc;
+	width: 500px;
+	padding: 2px;
+}
+div#projectplayer {
+	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+	/*float: right;*/
+	/*width: 550px;*/
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	padding: 2px;
+	width: 500px;
+}
+div#projectinfo {
+	width: 500px;
+	height: 35px;
+	background-color: #FFF;
+	float: right;
+	/*display: inline;*/
+}
+div#author {
+	float: left;
+	padding-left: 10px;
+	padding-top: 3px;
+}
+div#goodies {
+	float: right;
+	padding-right: 10px;
+	padding-top: 5px;
+}
+div.navigation a {
+	text-decoration: none;
+	color: #444;
+}
+div.navigation a#newcreate{
+	text-decoration: underline;
+	color: #2222BB;
+}
+div.navigation {
+	/* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
+	height: 485px;
+	float: left;
+	width: 460px;
+	margin-left: 0px;
+	margin-top: 0px;
+	background-color: #555;
+	background-color: #333;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding-left: 10px;
+	padding-top: 15px;
+}
+div.navigation-allusers {
+	/* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
+	height: 528px;
+	width: 750px;
+	background-color: #FFF;
+	float: left;
+	padding-left: 45px;
+	padding-right: 20px;
+}
+div.navigation-recentdesigns {
+	/* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
+	height: 528px;
+	width: 930px;
+	background-color: #FFF;
+	float: left;
+	padding-left: 25px;
+	padding-right: 0px;
+}
+ul.thumbs {
+	clear: both;
+	padding: 0;
+	-webkit-padding-start: 0px;
+	margin: 0px;
+	height: 455px;
+}
+ul.thumbs li {
+	float: left;
+	padding: 0;
+	margin: 5px 10px 5px 0;
+	list-style: none;
+}
+a.thumb {
+	padding: 3px;
+	display: block;
+	background-color: #444;
+	/*border: 1px solid #ccc;*/
+}
+ul.thumbs li.selected a.thumb {
+	/*background: #000;*/
+}
+a.thumb:focus {
+	outline: none;
+}
+ul.thumbs img {
+	border: none;
+	display: block;
+}
+div.thumbframe {
+	height: 105px;
+	background-color: #333;
+	padding: 5px;
+}
+div.wrapper {
+	position: relative;
+}
+img.playoverlay {
+	z-index: 4;
+  	position: absolute;
+  	left: 3px;
+  	top: 3px;
+}
+img.lock {
+	z-index: 2;
+	position: absolute;
+	left: 3px;
+	top: 3px;
+}
+img.delete {
+	z-index: 3;
+	position: absolute;
+	left: 61px;
+	top: 3px;
+}
+img.playthumb {
+	z-index: 1;
+}
+div.username a{
+	color: #FFF;
+	font-weight: bold;
+}
+p.projecttitle {
+	color: #FFF;
+	font-weight: bold;
+	padding: 0px;
+	margin: 0px;
+	display: inline;
+}
+p.projectuser {
+	color: #DDD;
+	padding: 0px;
+	margin: 0px;
+	display: inline;
+}
+p.projectuser a{
+	color: #76AACC;
+}
+div.pagination {
+	clear: both;
+	float: right;
+	margin-right: 12px;
+}
+div.navigation div.top {
+	margin-bottom: 12px;
+	height: 11px;
+}
+div.navigation div.bottom {
+	margin-top: 12px;
+}
+div.pagination a, div.pagination span.current {
+	display: block;
+	float: left;
+	margin-right: 2px;
+	padding: 4px 7px 2px 7px;
+	/*border: 1px solid #ccc;*/
+	color: #FFF;
+	background-color: #777;
+}
+div.pagination span.ellipsis {
+	display: block;
+	float: left;
+	margin-right: 2px;
+	padding: 4px 7px 2px 7px;
+	/*border: 1px solid #ccc;*/
+	color: #FFF;
+}
+div.pagination a:hover {
+	background-color: #eee;
+	text-decoration: none;
+	color: #333;
+}
+div.pagination span.current {
+	font-weight: bold;
+	background-color: #444;
+	border-color: #444;
+	color: #fff;
+}
+div.pagination span.ellipsis {
+	border: none;
+	padding: 5px 0 3px 2px;
+}

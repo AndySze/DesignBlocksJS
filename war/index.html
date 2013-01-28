@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>DesignBlocksJS</title>
+		
+		<link rel="stylesheet" href="css/site.css" type="text/css" />
+		<link rel="stylesheet" href="css/app.css" type="text/css" />
+		<link rel="stylesheet" href="css/galleriffic.css" type="text/css" />
+		<link rel="stylesheet" href="css/tango/skin.css" type="text/css" />
+		<link rel="stylesheet" href="css/jScrollPane.css" type="text/css" />
+		
+		<script src="js/import/jquery-1.4.1.js"></script>
+		<script src="js/import/jquery-ui-1.8.custom.min.js"></script>
+		<script src="js/import/jquery.cookie.js"></script>
+		<script src="js/import/jquery.galleriffic.js"></script>
+		<script src="js/import/jquery.jcarousel.js"></script>
+		<script src="js/import/color.js"></script>
+		<script src="js/import/jScrollPane.js"></script>
+		
+		<script src="js/icons.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/site.js"></script>
+		<script src="js/runtime.js"></script>
+		<script src="js/block.js"></script>
+		<script src="js/canvas.js"></script>
+		<script src="js/specs.js"></script>
+	</head>
+	
+	<body onMouseMove="appMouseMove(event)" onMouseDown="appMouseDown(event)" onMouseUp="appMouseUp(event)">
+	
+		<div id="page">
+				
+			<div id='header'>
+				<a href="http://designblocksjs.appspot.com"><img src="images/logosm3-beta.png" alt="DesignBlocks"></a>
+				<!-- <div id='login'></div> -->
+				<!-- <div id='notification'></div> -->
+			</div>
+			
+			<div style="clear: both;"></div>
+			
+			<div id='userlabel'>evhan55</div>
+				
+			<div id='thumbs' class='navigation'>
+				<ul class='thumbs noscript'> </ul>
+			</div>
+					
+			<div id="pane">
+				<div id="palette"></div>
+				<div id="selector"></div>
+			</div>
+		
+			<div id="stageHolder">
+				<canvas id="stage"></canvas>
+				<div id="canvascontrols"></div>
+				<div id="stageprojectinfo"></div>
+				<div id="loadingpane"></div>
+				
+				<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'
+					id='DesignBlocksMedia'
+					width='214px'
+					height='137px'
+					codebase='http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab'>
+					<param name='movie' value='DesignBlocksMedia.swf'/>
+					<param name='quality' value='high'/>
+					<param name='bgcolor' value='#EEEEEE'/>
+					<param name='allowScriptAccess' value='always'/>
+					<param name='allowFullScreen' value = 'true'/>
+					<embed
+						src='DesignBlocksMedia.swf'
+						quality='high'
+						bgcolor='#EEEEEE'
+						width='214px'
+						height='137px'
+						name='DesignBlocksMedia'
+						align='middle'
+						play='true'
+						loop='false'
+						allowScriptAccess='always'
+						allowFullScreen='true'
+						type='application/x-shockwave-flash'
+						pluginspage='http://www.adobe.com/go/getflashplayer'
+						wmode='opaque'
+					/>
+				</object>
+			</div>
+			
+			<div style="clear: both;"></div>
+			
+			<ul id="mycarousel" class="jcarousel-skin-tango">
+			</ul>
+
+		</div>
+		
+		<div style="clear: both;"></div>
+		
+		<!-- <div id="footer"></div> -->
+		
+		<div id="measureText"></div>
+		
+		<script type="text/javascript">
+			jQuery(document).ready(
+				function($) {
+					appInit();
+					getHeader();
+					//getThumbnailPane("http://www.designblocks.net/recentprojectlist?number=200", 25);
+					getThumbnailPane("http://www.designblocks.net/projectlist?uid=7", 25);
+					getAllUserThumbnailPane();
+					getFooter();
+				}
+			);
+		</script>
+		
+	</body>
+
+</html>
