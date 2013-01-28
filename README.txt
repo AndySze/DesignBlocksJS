@@ -2,7 +2,10 @@ DesignBlocksJS
 Evelyn Eastmond
 evelyn@media.mit.edu
 
-The DesignBlocksJS website code relies on a sample set of projects and users on a database stored in GoogleAppEngine.  To connect it to another set of users, you need to change which server this is connected to.  The server protocol is not currently documented.
+The DesignBlocksJS website code relies on a sample set of projects and users on a database stored in GoogleAppEngine (GAE).  To connect it to another set of users, you need to change which server this is connected to.  The server protocol is not currently documented.
+
+The /src directory just points to a servlet for GAE to serve the HTML5 code.
+The bulk of the HTML5 code is in the /war folder.
 
 Disclaimers:
 - There are bugs in some of the blocks
